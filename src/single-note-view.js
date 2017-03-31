@@ -4,10 +4,10 @@
     this.note = Note
   };
 
-  // SingleNoteView.prototype.returnHTMLString = function () {
-  //   return "<div>" + this.note.showNote + "</div>";
-  //   console.log(returnHTMLString());
-  // };
+  SingleNoteView.prototype.returnHTMLString = function () {
+    return "<div>" + this.note._text + "</div>";
+    console.log(returnHTMLString());
+  };
 
   exports.SingleNoteView = SingleNoteView;
 
