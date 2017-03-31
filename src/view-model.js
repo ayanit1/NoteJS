@@ -7,7 +7,7 @@
   View.prototype.returnHTML = function(){
     var listItemsHTML = ''
     this._noteList.listNotes().forEach(function(item){
-      listItemsHTML += '<li><div>' + item.showNote() + '</div></li>';
+      listItemsHTML += '<li><div>' + item.showNote().substring(0, 20) + '</div></li>';
     })
     return '<ul>' + listItemsHTML + '</ul>'
   };
