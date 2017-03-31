@@ -12,7 +12,6 @@ listCanCreateAndStoreNotes: function() {
   var newList = new List();
   newList.addNote("This is my note");
   newList.addNote("This is my other note");
-  console.log(newList._notes)
   assert.isEqual(newList.listNotes()[0].showNote(), "This is my note", 'listCanCreateAndStoreNotes');
   assert.isEqual(newList.listNotes()[1].showNote(), "This is my other note", 'listCanCreateAndStoreNotes');
 }
