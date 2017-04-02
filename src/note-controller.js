@@ -7,10 +7,19 @@
     this._noteList = noteList;
   };
 
-  NoteController.prototype.insertHTML = function (view, element = document.getElementById("app")) {
+// shows list of notes
+  NoteController.prototype.insertHTML = function (view, element = document.getElementById("notelist")) {
     var myNotes = view.returnHTML();
     var element = element;
     element.innerHTML = myNotes
+  };
+
+  NoteController.prototype.makeURLShowNoteForCurrentPage = function() {
+    window.addEventListener("hashchange", this.showNoteForCurrentPage);
+  };
+
+  NoteController.prototype.showNoteForCurrentPage = function() {
+    document.getElementById("app").innerHTML = this.noteList.notes[window.location.hash.split("/")[1]].text
   };
 
   exports.NoteController = NoteController;

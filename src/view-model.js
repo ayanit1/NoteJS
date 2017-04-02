@@ -4,7 +4,6 @@
     this._noteList = noteList;
   };
 
-// shows partial note
   View.prototype.returnHTML = function(){
     var listItemsHTML = ''
     this._noteList.listNotes().forEach(function(item){

@@ -6,3 +6,4 @@ var view = new View(noteList)
 var controller = new NoteController(noteList)
 
 controller.insertHTML(view)
+controller.makeURLShowNoteForCurrentPage();
