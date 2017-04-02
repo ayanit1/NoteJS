@@ -4,10 +4,11 @@
     this._noteList = noteList;
   };
 
+// shows partial note
   View.prototype.returnHTML = function(){
     var listItemsHTML = ''
     this._noteList.listNotes().forEach(function(item){
-      listItemsHTML += '<li><div>' + item.showNote().substring(0, 20) + '</div></li>';
+      listItemsHTML += "<li><div><a href='#notes/" + item.id + "'>" + item.showNote().substring(0, 20) + "</a></div></li>";
     })
     return '<ul>' + listItemsHTML + '</ul>'
   };
