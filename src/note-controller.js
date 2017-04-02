@@ -11,7 +11,7 @@
   NoteController.prototype.insertHTML = function (view, element = document.getElementById("notelist")) {
     var myNotes = view.returnHTML();
     var element = element;
-    element.innerHTML = myNotes
+    element.value = myNotes
   };
 
   NoteController.prototype.makeURLShowNoteForCurrentPage = function() {
@@ -19,7 +19,7 @@
   };
 
   NoteController.prototype.showNoteForCurrentPage = function() {
-    document.getElementById("app").innerHTML = this.noteList.notes[window.location.hash.split("/")[1]].text
+    document.getElementById("app").value = this.noteList.notes[window.location.hash.split("/")[1]].text
   };
 
   exports.NoteController = NoteController;

@@ -24,7 +24,7 @@ test({
     var dummyView = new dummyView();
     var noteController = new NoteController(dummyView)
     noteController.insertHTML(dummyView, dummyElement);
-    assert.isEqual("<ul><li><div>Fake Note</div></ul></li>", dummyElement.innerHTML, "noteControllerInsertsHTML")
+    assert.isEqual("<ul><li><div>Fake Note</div></ul></li>", dummyElement.value, "noteControllerInsertsHTML")
 
   }
 

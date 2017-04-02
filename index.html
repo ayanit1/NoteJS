@@ -6,12 +6,13 @@
     <title></title>
   </head>
   <body>
-    <form>
+    <div>
+    <form id="text" action="#">
       <h2>Create a Note:</h2>
-      <textarea rows="5" cols="30"></textarea><br />
-      <input type="submit" />
+      <textarea id="textarea" rows="5" cols="30"></textarea><br />
+      <button type="button" onclick= "noteList.addNote(document.getElementById('textarea').value); controller.insertHTML(view); controller.showNoteForCurrentPage()">Create Note</button>
     </form>
-
+    </div>
     <div id='notelist'></div>
     <div id='app'></div>
       <script src='./src/note-model.js'> </script>
